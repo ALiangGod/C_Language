@@ -1,12 +1,20 @@
 package Game;
 
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.Random;
 import java.util.Scanner;
 
-public class GameJFrame extends JFrame {
+public class GameJFrame extends JFrame implements KeyListener {
 
     int[][] date = new int[4][4];
+    // 记录白方块位置
+    int x = 0;
+    int y = 0;
+
+
     public GameJFrame(){
 
         initDate(date);
@@ -38,6 +46,10 @@ public class GameJFrame extends JFrame {
         }
 
         for (int i = 0; i < date1.length; i++) {
+            if (i == 0){
+                x = i/4;
+                y = i%4;
+            }
             date[i/4][i%4] = date1[i];
         }
     }
@@ -49,13 +61,24 @@ public class GameJFrame extends JFrame {
         JLabel jLabel = new JLabel(icon);
         jLabel.setBounds(0, 0, 105, 105);
         this.getContentPane().add(jLabel);*/
+        //清空图片
+        this.getContentPane().removeAll();
+
         for (int i = 0; i < 4; i++){
             for (int j = 0; j < 4; j++){
-                JLabel jLabel = new JLabel(new ImageIcon("D:\\IDEA\\myModule\\src\\Game\\image\\animal\\animal1\\"+date[i][j]+".jpg"));
-                jLabel.setBounds(105 * j, 105 * i, 105, 105);
+                JLabel jLabel = new JLabel(new ImageIcon("myModule\\src\\Game\\image\\animal\\animal3\\"+date[i][j]+".jpg"));
+                jLabel.setBounds(105 * j + 83, 105 * i + 134, 105, 105);
+                // 给每个图片添加边框
+                jLabel.setBorder(new BevelBorder(1));
                 this.getContentPane().add(jLabel);
             }
         }
+        ImageIcon icon = new ImageIcon("myModule\\src\\Game\\image\\background.png");
+        JLabel jLabel1 = new JLabel(icon);
+        jLabel1.setBounds(40, 40,508, 560);
+        this.getContentPane().add(jLabel1);
+        //刷新界面
+        this.getContentPane().repaint();
     }
 
     private void initJFrameBar() {
@@ -98,5 +121,37 @@ public class GameJFrame extends JFrame {
         this.setDefaultCloseOperation(3);
         //取消居中放置控件
         this.setLayout(null);
+        //添加键盘监控事件
+        this.addKeyListener(this);
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        int keyCode = e.getKeyCode();
+        if (keyCode == 37){
+            if (x-1 >= 0){
+                int temp = date[x][y];
+                date[x][y] = date[x-1][y];
+                date[x-1][y] = temp;
+            }
+        }else if(keyCode == 38){
+            if (y - 1 >= 0){
+                int temp = date[x][y];
+                date[x][y] = date[x][y-1];
+                date[x][y-1] = temp;
+            }
+        }
+
+        initImage(date);
     }
 }
