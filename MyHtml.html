@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8"> 
-<title>网页设计作业</title> 
-<link rel="stylesheet" href="style.css">
-<style>
-	*{
+<meta charset="utf-8"> 					<!--编码格式 -->
+<title>网页设计作业</title> 				<!-- 标题-->
+<link rel="stylesheet" href="style.css">	<!--导入的css文件 -->
+<style>				/*<!--设置浏览器容器边框为0 */
+	*{			
 		margin: 0;
 		padding: 0;
 	}
 </style>
 </head>
-<body style="background: url(5.jpg) no-repeat;background-size: cover;">
-	<div style="position: relative;left: 20px;top: 20px;">
-		<img src="6.png" alt="" width="70px" height="70px">
+<body style="background: url(5.jpg) no-repeat;background-size: cover;">		<!--设置整个浏览器背景 代码含义：背景图片文件路径 //不重复//背景大小//覆盖全图-->
+	<div style="position: relative;left: 20px;top: 20px;">		<!--设置图片容器 代码：位置设置自定义 距离左侧位置20px 距离上方位置20px-->
+		<img src="6.png" alt="" width="70px" height="70px">		<!--设置图片 代码含义：图片路径//图片不显示默认显示//宽度70//高70-->
 	</div>
 	<div>
-		<h2 style="color: aliceblue;position: relative;left: 90px;top: -35px;">阿亮的简历</h2>
+		<h2 style="color: aliceblue;position: relative;left: 90px;top: -35px;">阿亮的简历</h2>		<!--设置字体容器 代码含义：白色//位置自定义//距离左侧//距离上方// -->
 	</div>
-	<div style="position: relative;left: -30px;top: -70px;">
+	<div style="position: relative;left: -30px;top: -70px;">			<!--设置字体容器 代码：位置自定义//距离左侧//距离上方 -->
 		<div>
 			<h1 style="color: rgb(247, 215, 215);position: relative;left: 400px;top: 158px;font-size: 80px;text-shadow: 3px 5px 20px #ff0000;">网页设计<span style="color: rgb(252, 246, 184);text-shadow: 3px 5px 51px #e3c402;">  -阿亮</span></h1>
-		</div>
+		</div>			<!--上方代码 设置字体//设置颜色//设置位置自定义//距离左侧//距离上方//字体大小//字体阴影//      span：单独设置一个个体//颜色 //字体阴影 -->
 		<div> 
 			<p style="color: aliceblue;font-size: 18px;position: relative;left: 430px;top: 154px;">热 衷 探 索 &ensp;,&emsp;探 索 未 知 &ensp;,&emsp; 逆 流 而 上 &ensp;,&emsp;乘 风 破 浪</p>
-		</div>
+		</div> 	<!--颜色  字体大小  位置自定义  距离左侧 距离上方  ensp为一个空格  emsp为一个大空格 -->
 	</div>
 	<div style="width: 100%;height: 150px;position: relative;top: -236px;background-image: linear-gradient(to bottom, rgba(0, 0, 0,1), rgba(0,0,0,0));">
-
+			<!--上方代码 宽 高 位置自定义  距离上方 背景图片设置为渐变色（自定向下  颜色变化） -->
 	</div>
 	<!-- <div style="position: relative;left: 804px;top: -348px;">
 		<a href=""><h2 style="color: aliceblue;font-size: 20px;font-weight: 300;">基本资料</h2></a>
@@ -38,14 +38,14 @@
 	<!-- <div style="position: relative;left: 1052px;top: -398px;">
 		<a href=""><h2 style="color: aliceblue;font-size: 20px;font-weight: 300;">联系方式</h2></a>
 	</div> -->
-
+			<!-- 下方代码 宽 高 边框 边框大小 边框为实线   边框圆角   位置自定义  距离左侧从 距离上方    设置动画  动画名词 动画播放时间   重复播放  播放速度线性-->
 	<div id="yuan" style="width: 100px;height: 100px;border: 1px solid #f8d703;border-radius: 50%;position: relative;left: 569px;top: -12px;animation:move 5s infinite linear;">
-		<div style="position: relative;left: 29px;top: 22px;">
-			<a href=""><img src="8.png" alt="" width="50px" height="50px"></a>
+		<div style="position: relative;left: 29px;top: 22px;">		<!--位置自定义  距离左侧 上方 -->
+			<a href=""><img src="8.png" alt="" width="50px" height="50px"></a>		<!--img--- 图片的路径  宽高 -->
 		</div>
-	</div>
-	<style>
-		@keyframes move{
+	</div><!--下方设置动画 动画名词 move -->
+	<style>			
+		@keyframes move{				
 			0% {position: relative;left: 600px;top: 22px;}
 			25% {position: relative;left: 600px;top: 30px;}
 			50% {position: relative;left: 600px;top: 22px;}
@@ -55,8 +55,8 @@
 	</style>
 
 
-	<div class="information">
-		<span style="color: white;font-size: 20px;font-weight: 300;">基本资料</span>
+	<div class="information">			
+		<span class="font1">基本资料</span>
 		<div class="content">
 			<p style="color: white;">姓名：吴亮亮</p>
 			<p style="color: white;">学号：40513201004</p>
@@ -64,20 +64,38 @@
 		</div>
 	</div>
 	<div class="information1">
-		<span style="color: white;font-size: 20px;font-weight: 300;">项目经验</span>
+		<span class="font1">项目经验</span>
 		<div class="content">
 			<p style="color: white;">简历网页设计</p>
 			<p style="color: white;">小游戏开发</p>
 		</div>
 	</div>
 	<div class="information2">
-		<span style="color: white;font-size: 20px;font-weight: 300;">联系方式</span>
+		<span class="font1">联系方式</span>
 		<div class="content">
 			<p style="color: white;">QQ:15233867981</p>
 			<p style="color: white;">Email:3534926590@qq.com</p>
 		</div>
-	</div>
+	</div>			<!--下方为css样式代码  font1样式 依次向下为 颜色白色  字体大小 字体宽度 字体阴影   information font1样式 字体大小 字体颜色   下面的  hover表示鼠标划入执行下面样式 字体变为** 颜色变为**-->
 	<style>
+		.font1{
+			color: white;
+			font-size: 20px;
+			font-weight: 300;
+			text-shadow: 3px 3px 12px #f0a004;  /*阴影*/  
+		}
+		.information:hover .font1{  /*hover 表示鼠标划入执行下方css*/
+			font-size: 21px;
+			color: #e3c402;
+		}
+		.information1:hover .font1{
+			font-size: 21px;
+			color: #e3c402;
+		}
+		.information2:hover .font1{
+			font-size: 21px;
+			color: #e3c402;
+		}
 		.information{
 			display: inline-block;
 			position: relative;left: 789px;top: -459px;
@@ -87,24 +105,24 @@
 			position: relative;left: 830px;top: -459px;
 		}
 		.information2{
-			display: inline-block;
-			position: relative;left: 861px;top: -459px;
+			display: inline-block;		/*  设置显示为行-块元素*/
+			position: relative;left: 861px;top: -459px; /*位置*/
 		}
 		.content{
-			min-width: 200px;
-			display: none;
-			position: absolute;
-			padding: 3px 0px;
-			background-color: #00000000;
+			min-width: 200px;		/*最小宽度*/
+			display: none;		/*设置显示为 不显示*/
+			position: absolute;		/*位置为 相对位置absolute*/
+			padding: 3px 0px;		/*显示框大小  就是鼠标划入后 下方显示的个人信息框的大小*/
+			background-color: #00000000;		/*背景色*/
 		}
 		.information:hover .content{
-			display: block;
+			display: block;			/*鼠标划入设置显示为 显示*/
 		}
 		.information1:hover .content{
-			display: block;
+			display: block;			/*同上*/
 		}
 		.information2:hover .content{
-			display: block;
+			display: block;			/*同上*/
 		}
 	</style>
 
